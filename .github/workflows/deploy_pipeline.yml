@@ -29,5 +29,5 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag my-image-name:latest
       - name: Build the Docker image
-        run: docker push mydockeruser/docker-whale
+        run: docker push martiitram/java-springboot-ci-cd-with-github-actions
   
