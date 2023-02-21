@@ -8,7 +8,7 @@ class HelloWorldTest {
     @Test
     void HelloWorldUnitTest() {
         HelloWorld helloWorld = new HelloWorld();
-        assertEquals("hola", helloWorld.printHelloWorld());
+        assertEquals("hola2", helloWorld.printHelloWorld());
 
     }
 }
