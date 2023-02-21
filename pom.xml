@@ -13,16 +13,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>devmodels</name>
     <description>devmodels</description>
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <restapi.baseurl>http://localhost:8080/</restapi.baseurl>
-            </properties>
-        </profile>
-    </profiles>
     <properties>
-        <java.version>19</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -76,7 +68,7 @@
                         <include>**/*Feature.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <restapi.baseurl>${restapi.baseurl}</restapi.baseurl>
+						<restapi.baseurl>http://localhost:8080/</restapi.baseurl>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
@@ -121,6 +113,7 @@
                 </executions>
             </plugin>
         </plugins>
+		<finalName>java-springboot-ci-cd-with-github-actions</finalName>
     </build>
     <reporting>
         <plugins>
