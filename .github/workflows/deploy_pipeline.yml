@@ -27,7 +27,7 @@ jobs:
       - name: list docker images
         run: docker images
       - name: upload image to dockerhub
-        run: docker push martiitram/java-springboot-ci-cd-with-github-actions
+        run: docker push martiitram/java-springboot-ci-cd-with-github-actions:$NOW
 
 
       - name: update_open_shift_image_version
