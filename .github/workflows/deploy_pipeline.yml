@@ -34,5 +34,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/java-springboot-ci-cd-with-github-actions:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/java-springboot-ci-cd-with-github-actions:latest
 
