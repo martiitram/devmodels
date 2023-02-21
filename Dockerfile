@@ -18,6 +18,6 @@ RUN mvn clean package
 
 FROM openjdk:19-alpine
 EXPOSE 8080
-ADD /usr/app/target/java-springboot-ci-cd-with-github-actions.jar java-springboot-ci-cd-with-github-actions.jar
-#COPY --from=build /usr/app/target/java-springboot-ci-cd-with-github-actions.jar java-springboot-ci-cd-with-github-actions.jar
+#ADD target/java-springboot-ci-cd-with-github-actions.jar java-springboot-ci-cd-with-github-actions.jar
+COPY --from=build /usr/app/target/java-springboot-ci-cd-with-github-actions.jar java-springboot-ci-cd-with-github-actions.jar
 ENTRYPOINT ["java","-jar","/java-springboot-ci-cd-with-github-actions.jar"]
