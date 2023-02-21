@@ -9,6 +9,8 @@
 name: deploy_pipeline
 
 on:
+  workflow_dispatch:
+
   push:
     branches: [ "main" ]
 
