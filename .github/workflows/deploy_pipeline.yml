@@ -40,5 +40,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: api test
-      run: #mvn verify
+#    - name: api test
+#      run: mvn verify
