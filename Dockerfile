@@ -17,4 +17,4 @@
 FROM openjdk:19-alpine
 EXPOSE 8080
 ADD target/java-springboot-ci-cd-with-github-actions.jar java-springboot-ci-cd-with-github-actions.jar
-ENTRYPOINT ["java","-jar","/springboot-images-new.jar"]
+ENTRYPOINT ["java","-jar","/java-springboot-ci-cd-with-github-actions.jar"]
