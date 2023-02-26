@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-springboot-ci-cd-with-github-actions-server
+      app: java-springboot-ci-cd-with-github-actions
   template:
     metadata:
       labels:
