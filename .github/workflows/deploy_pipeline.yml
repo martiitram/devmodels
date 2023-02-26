@@ -36,6 +36,6 @@ jobs:
       - name: login to OpenShift
         run: oc login --token=${{ secrets.OC_TOKEN }} --server=https://api.sandbox-m3.1530.p1.openshiftapps.com:6443
       - name: deploy service to OpenShift
-        run: pipelineScripts/service.yml
+        run: oc apply -f pipelineScripts/service.yml
       - name: deploy deployment to OpenShift
-        run: pipelineScripts/deployment.yml
+        run: oc apply -f pipelineScripts/deployment.yml
