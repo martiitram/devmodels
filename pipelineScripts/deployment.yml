@@ -14,4 +14,8 @@ spec:
     spec:
       containers:
         - name: java-springboot-ci-cd-with-github-actions
-          image: java-springboot-ci-cd-with-github-actions:image_tag_to_replace
+          image: martiitram/java-springboot-ci-cd-with-github-actions:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http

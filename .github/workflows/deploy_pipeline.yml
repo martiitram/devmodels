@@ -23,15 +23,15 @@ jobs:
       - name: Set current date as env variable
         run: echo "NOW=$(date +'%Y%m%dT%H%M%S')" >> $GITHUB_ENV
       - name: Build the Docker image
-        run: docker build . --file Dockerfile -t martiitram/java-springboot-ci-cd-with-github-actions:$NOW
+        run: docker build . --file Dockerfile -t martiitram/java-springboot-ci-cd-with-github-actions
       - name: list docker images
         run: docker images
       - name: upload image to dockerhub
-        run: docker push martiitram/java-springboot-ci-cd-with-github-actions:$NOW
+        run: docker push martiitram/java-springboot-ci-cd-with-github-actions:latest
 
 
-      - name: update_open_shift_image_version
-        run: sed -i 's/image_tag_to_replace/$NOW/g' pipelineScripts/deployment.yml
+#      - name: update_open_shift_image_version
+#        run: sed -i 's/image_tag_to_replace/$NOW/g' pipelineScripts/deployment.yml
 
       - name: login to OpenShift
         run: oc login --token=${{ secrets.OC_TOKEN }} --server=${{ secrets.OC_SERVER }}
