@@ -9,5 +9,6 @@ spec:
     kind: Service
     name: java-springboot-ci-cd-with-github-actions
   tls: null
+  path: /hello
   port:
     targetPort: http
