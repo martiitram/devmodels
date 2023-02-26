@@ -31,9 +31,11 @@ jobs:
 
 
       - name: update_open_shift_image_version
-        run: sed -i 's/image_tag_to_replace/$NOW/g' pipelineScripts/service_deploy.yml
+        run: sed -i 's/image_tag_to_replace/$NOW/g' pipelineScripts/deployment.yml
 
       - name: login to OpenShift
         run: oc login --token=${{ secrets.OC_TOKEN }} --server=https://api.sandbox-m3.1530.p1.openshiftapps.com:6443
-      - name: deploy to OpenShift
-        run: pipelineScripts/service_deploy.yml
+      - name: deploy service to OpenShift
+        run: pipelineScripts/service.yml
+      - name: deploy deployment to OpenShift
+        run: pipelineScripts/deployment.yml
