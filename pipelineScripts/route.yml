@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: java-springboot-ci-cd-with-github-actions-route
+  namespace: martiitram-dev
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: java-springboot-ci-cd-with-github-actions
+  tls: null
+  port:
+    targetPort: http

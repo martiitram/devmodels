@@ -39,3 +39,5 @@ jobs:
         run: oc apply -f pipelineScripts/service.yml
       - name: deploy deployment to OpenShift
         run: oc apply -f pipelineScripts/deployment.yml
+      - name: deploy route to OpenShift
+        run: oc apply -f pipelineScripts/route.yml
