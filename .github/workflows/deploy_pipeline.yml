@@ -30,7 +30,7 @@ jobs:
 
 
       - name: update_open_shift_image_version
-        run: sed -i 's/image_tag_to_replace/${NOW}/g' pipelineScripts/deployment.yml
+        run: sed -i "s/image_tag_to_replace/${NOW}/g" pipelineScripts/deployment.yml
 
       - name: login to OpenShift
         run: oc login --token=${{ secrets.OC_TOKEN }} --server=${{ secrets.OC_SERVER }}
