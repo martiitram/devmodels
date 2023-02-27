@@ -19,7 +19,7 @@ jobs:
 
 # add blue_release tag to actual green_release
       - name: pull green_release
-        run: docker pull nginx:green_release
+        run: docker pull martiitram/java-springboot-ci-cd-with-github-actions:green_release
       - name: Tag actual green release with blue
         run: docker tag martiitram/java-springboot-ci-cd-with-github-actions:green_release martiitram/java-springboot-ci-cd-with-github-actions:blue_release
       - name: Push image with new tag
