@@ -25,6 +25,8 @@ jobs:
 #      - name: Push image with new tag
 #        run: docker push martiitram/java-springboot-ci-cd-with-github-actions:blue_release
 
+      - name: Set current date as env variable
+        run: echo "NOW=$(date +'%Y%m%dT%H%M%S')" >> $GITHUB_ENV
       - name: Build the Docker image
         run: docker build . --file Dockerfile -t martiitram/java-springboot-ci-cd-with-github-actions:$NOW
       - name: list docker images
