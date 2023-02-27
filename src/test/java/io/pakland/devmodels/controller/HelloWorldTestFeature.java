@@ -21,7 +21,7 @@ class HelloWorldTestFeature {
         try {
             HttpResponse<String> response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            assertEquals(response.body(), "hola1");
+            assertEquals(response.body(), "patata");
         } catch (IOException | InterruptedException e) {
             fail("error on io");
             throw new RuntimeException(e);
